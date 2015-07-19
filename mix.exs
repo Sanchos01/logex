@@ -14,7 +14,8 @@ defmodule Logex.Mixfile do
   def application do
     [applications:  [
                       :logger, 
-                      :discachex
+                      :tinca,
+                      :silverb
                     ],
      mod: {Logex, []}]
   end
@@ -30,7 +31,8 @@ defmodule Logex.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-      {:discachex, git: "git@git.maxbet.asia:elixir/discachex.git"}
+      {:tinca, github: "timCF/tinca"},
+      {:silverb, github: "timCF/silverb"}
     ]
   end
 end

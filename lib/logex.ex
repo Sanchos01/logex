@@ -1,6 +1,6 @@
 defmodule Logex do
   use Application
-
+  use Silverb
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
   # for more information on OTP Applications
   def start(_type, _args) do
@@ -19,23 +19,23 @@ defmodule Logex do
 
   defmacro __using__([ttl: ttl]) when is_integer(ttl) do
     quote location: :keep do
-      require Logger
-      def notice(bin) when is_binary(bin) do
-        Discachex.memo(&logex_notice/1, [bin], unquote(ttl))
-        Logger.debug bin
+      #
+      # priv
+      #
+      defp puts_message(color, mess, lambda) do 
+        lambda.(mess)
+        IO.puts("#{IO.ANSI.bright}#{__MODULE__}#{IO.ANSI.reset} : #{color}#{mess}#{IO.ANSI.reset}") 
       end
-      def warn(bin) when is_binary(bin) do
-        Discachex.memo(&logex_warn/1, [bin], unquote(ttl))
-        Logger.warn bin
-      end
-      def error(bin) when is_binary(bin) do
-        Discachex.memo(&logex_error/1, [bin], unquote(ttl))
-        Logger.error bin
-      end
+      #
+      # public
+      #
+      def notice(bin) when is_binary(bin), do: Tinca.memo(&puts_message/3, [IO.ANSI.cyan, bin, &logex_notice/1], unquote(ttl))
+      def warn(bin) when is_binary(bin), do: Tinca.memo(&puts_message/3, [IO.ANSI.yellow, bin, &logex_warn/1], unquote(ttl))
+      def error(bin) when is_binary(bin), do: Tinca.memo(&puts_message/3, [IO.ANSI.red, bin, &logex_error/1], unquote(ttl))
       defp logex_notice(_), do: :ok
       defp logex_warn(_), do: :ok
       defp logex_error(_), do: :ok
-      defoverridable [logex_notice: 1, logex_warn: 1, logex_error: 1]
+      defoverridable [logex_notice: 1, logex_warn: 1, logex_error: 1, notice: 1, warn: 1, error: 1]
     end
   end
 end
