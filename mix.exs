@@ -15,7 +15,8 @@ defmodule Logex.Mixfile do
     [applications:  [
                       :logger, 
                       :tinca,
-                      :silverb
+                      :silverb,
+                      :exutils
                     ],
      mod: {Logex, []}]
   end
@@ -32,7 +33,8 @@ defmodule Logex.Mixfile do
   defp deps do
     [
       {:tinca, github: "timCF/tinca"},
-      {:silverb, github: "timCF/silverb"}
+      {:silverb, github: "timCF/silverb"},
+      {:exutils, github: "timCF/exutils"}
     ]
   end
 end

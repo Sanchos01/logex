@@ -24,7 +24,7 @@ defmodule Logex do
       #
       defp puts_message(color, mess, lambda) do 
         lambda.(mess)
-        IO.puts("#{IO.ANSI.bright}#{__MODULE__}#{IO.ANSI.reset} : #{color}#{mess}#{IO.ANSI.reset}") 
+        IO.puts("#{IO.ANSI.bright}#{__MODULE__}#{IO.ANSI.reset} : #{IO.ANSI.green}#{Exutils.make_verbose_datetime}#{IO.ANSI.reset} : #{color}#{mess}#{IO.ANSI.reset}") 
       end
       #
       # public

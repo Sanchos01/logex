@@ -2,7 +2,9 @@
   "exactor": {:git, "git://github.com/sasa1977/exactor.git", "0467f8100bc735405d597dbf94996195eb31e0b6", [tag: "0467f8100bc735405d597dbf94996195eb31e0b6"]},
   "exrm": {:git, "git://github.com/bitwalker/exrm.git", "bebc97c7707b6019a2790132b16653418f25afdc", [tag: "bebc97c7707b6019a2790132b16653418f25afdc"]},
   "extask": {:git, "git://github.com/timCF/extask.git", "691cc1a515750bead8b81ed6c13cddbcf115d754", []},
-  "exutils": {:git, "git://github.com/timCF/exutils.git", "06c4144ba17ca1f4e83da5cf94859dfa2a38800b", []},
+  "exutils": {:git, "git://github.com/timCF/exutils.git", "07ac3330459fdc4f99a5914de8cb151170a6bc13", []},
   "hashex": {:git, "git://github.com/timCF/hashex.git", "cc6b4307daa1ab18c94cdd33bf3cb8a3dab28b96", []},
-  "silverb": {:git, "git://github.com/timCF/silverb.git", "20f61ad039012540c238fad7c70ed61241e98904", []},
-  "tinca": {:git, "git://github.com/timCF/tinca.git", "bb683949eaf45cafe67cf682034e63abd2b86950", []}}
+  "quickrand": {:hex, :quickrand, "1.5.0"},
+  "silverb": {:git, "git://github.com/timCF/silverb.git", "1ea39cd1bb63c2d99cacca954e0c8f2788961686", []},
+  "tinca": {:git, "git://github.com/timCF/tinca.git", "dc65918473de04eef8340e9500754811882c5515", []},
+  "uuid": {:git, "git://github.com/okeuday/uuid.git", "6bc38507460c821321d66504d3f8d6c1cdb57d98", []}}
