@@ -13,10 +13,8 @@ defmodule Logex.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [applications:  [
-                      :logger, 
-                      :tinca,
+                      :logger,
                       :silverb,
-                      :exutils
                     ],
      mod: {Logex, []}]
   end
@@ -32,9 +30,7 @@ defmodule Logex.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-      {:tinca, github: "timCF/tinca"},
       {:silverb, github: "timCF/silverb"},
-      {:exutils, github: "timCF/exutils"}
     ]
   end
 end
