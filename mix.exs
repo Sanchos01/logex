@@ -32,7 +32,7 @@ defmodule Logex.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-      {:tinca, github: "timCF/tinca"},
+      {:tinca, github: "Sanchos01/tinca"},
       {:silverb, github: "timCF/silverb"},
       {:exutils, github: "timCF/exutils"}
     ]
